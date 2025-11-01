@@ -1,6 +1,6 @@
 import { ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroBg from "@/assets/hero-bg.jpg";
+import heroBg from "@/assets/hero-dark-ice.jpg";
 
 const Hero = () => {
   const scrollToPortfolio = () => {
@@ -15,22 +15,23 @@ const Hero = () => {
       id="home"
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-      {/* Background Image with Overlay */}
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${heroBg})` }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/70 to-background"></div>
+      {/* Background with Ice Effects */}
+      <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${heroBg})` }}>
+        <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/80 to-background"></div>
       </div>
+      
+      {/* Liquid Ice Glows */}
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 gradient-glow opacity-40 blur-3xl animate-float"></div>
+      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 gradient-glow opacity-30 blur-3xl animate-float" style={{ animationDelay: "2s" }}></div>
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center">
-        <div className="max-w-4xl mx-auto space-y-6 md:space-y-8 animate-fade-in-up">
+        <div className="max-w-4xl mx-auto space-y-6 md:space-y-8 animate-fade-in-up glass-liquid rounded-3xl p-8 md:p-12">
           <div className="space-y-3 md:space-y-4">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold drop-shadow-glow">
               <span className="text-gradient">FASSEU FRANCK</span>
             </h1>
-            <p className="text-xl md:text-2xl lg:text-3xl text-muted-foreground font-light">
+            <p className="text-xl md:text-2xl lg:text-3xl text-foreground/90 font-light">
               Développeur Web Fullstack
             </p>
           </div>
@@ -70,9 +71,10 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Decorative Elements */}
-      <div className="absolute top-20 left-10 w-20 h-20 rounded-full bg-primary/20 blur-3xl animate-float"></div>
-      <div className="absolute bottom-20 right-10 w-32 h-32 rounded-full bg-accent/20 blur-3xl animate-float" style={{ animationDelay: "1s" }}></div>
+      {/* Ice Crystal Decorations */}
+      <div className="absolute top-20 left-10 w-32 h-32 rounded-full bg-primary/10 blur-2xl animate-float shadow-glow"></div>
+      <div className="absolute bottom-20 right-10 w-40 h-40 rounded-full bg-accent/10 blur-2xl animate-float shadow-glow" style={{ animationDelay: "1s" }}></div>
+      <div className="absolute top-1/2 right-20 w-24 h-24 rounded-full bg-primary/15 blur-xl animate-float" style={{ animationDelay: "1.5s" }}></div>
     </section>
   );
 };

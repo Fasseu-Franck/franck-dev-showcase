@@ -8,7 +8,7 @@ const Contact = () => {
       label: "Téléphone",
       value: "+237 671 761 503",
       link: "tel:+237671761503",
-      gradient: "gradient-aqua",
+      gradient: "gradient-ice",
     },
     {
       icon: Mail,
@@ -29,20 +29,23 @@ const Contact = () => {
       label: "Localisation",
       value: "Yaoundé, Nkolmbong",
       link: null,
-      gradient: "bg-accent",
+      gradient: "gradient-frost",
     },
   ];
 
   return (
-    <section id="contact" className="py-20 md:py-32 bg-background">
+    <section id="contact" className="py-20 md:py-32 bg-background relative overflow-hidden">
+      {/* Ambient Glows */}
+      <div className="absolute top-20 left-1/4 w-96 h-96 gradient-glow opacity-20 blur-3xl"></div>
+      <div className="absolute bottom-20 right-1/4 w-80 h-80 gradient-glow opacity-15 blur-3xl"></div>
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto relative z-10">
           {/* Section Title */}
           <div className="text-center mb-12 md:mb-16 animate-fade-in">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
               Me <span className="text-gradient">Contacter</span>
             </h2>
-            <div className="w-24 h-1 gradient-aqua mx-auto rounded-full"></div>
+            <div className="w-24 h-1 gradient-ice mx-auto rounded-full shadow-glow"></div>
             <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
               N'hésitez pas à me contacter pour discuter de vos projets ou opportunités de collaboration.
               Je suis toujours ouvert à de nouveaux défis !
@@ -54,11 +57,11 @@ const Contact = () => {
             {contactInfo.map((info, index) => (
               <div
                 key={info.label}
-                className="bg-card shadow-card rounded-2xl p-6 hover:shadow-aqua transition-all duration-300 hover:scale-105"
+                className="glass-ice rounded-2xl p-6 hover:shadow-glow transition-all duration-300 hover:scale-105 liquid-border"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="flex items-start gap-4">
-                  <div className={`p-3 rounded-xl ${info.gradient} flex-shrink-0`}>
+                  <div className={`p-3 rounded-xl ${info.gradient} flex-shrink-0 shadow-glow`}>
                     <info.icon className="text-white" size={24} />
                   </div>
                   <div className="flex-1 min-w-0">

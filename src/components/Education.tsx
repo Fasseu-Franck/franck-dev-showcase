@@ -3,23 +3,25 @@ import { Badge } from "@/components/ui/badge";
 
 const Education = () => {
   return (
-    <section id="education" className="py-20 md:py-32 bg-gradient-soft">
+    <section id="education" className="py-20 md:py-32 bg-background relative overflow-hidden">
+      {/* Decorative Glows */}
+      <div className="absolute inset-0 gradient-glow opacity-15"></div>
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto relative z-10">
           {/* Section Title */}
           <div className="text-center mb-12 md:mb-16 animate-fade-in">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
               Formation & <span className="text-gradient">Diplômes</span>
             </h2>
-            <div className="w-24 h-1 gradient-aqua mx-auto rounded-full"></div>
+            <div className="w-24 h-1 gradient-ice mx-auto rounded-full shadow-glow"></div>
           </div>
 
           {/* Education Items */}
           <div className="space-y-6">
             {/* BAC */}
-            <div className="bg-card shadow-card rounded-2xl p-6 md:p-8 hover:shadow-aqua transition-all duration-300 animate-fade-in-up">
+            <div className="glass-ice rounded-2xl p-6 md:p-8 hover:shadow-glow transition-all duration-300 animate-fade-in-up liquid-border">
               <div className="flex items-start gap-4">
-                <div className="p-3 rounded-xl gradient-aqua flex-shrink-0">
+                <div className="p-3 rounded-xl gradient-ice flex-shrink-0 shadow-glow">
                   <GraduationCap className="text-white" size={24} />
                 </div>
                 <div className="flex-1">
@@ -44,9 +46,9 @@ const Education = () => {
             </div>
 
             {/* Formations Complémentaires */}
-            <div className="bg-card shadow-card rounded-2xl p-6 md:p-8 hover:shadow-aqua transition-all duration-300 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+            <div className="glass-ice rounded-2xl p-6 md:p-8 hover:shadow-glow transition-all duration-300 animate-fade-in-up liquid-border" style={{ animationDelay: "0.1s" }}>
               <div className="flex items-start gap-4">
-                <div className="p-3 rounded-xl gradient-deep flex-shrink-0">
+                <div className="p-3 rounded-xl gradient-deep flex-shrink-0 shadow-glow">
                   <BookOpen className="text-white" size={24} />
                 </div>
                 <div className="flex-1">

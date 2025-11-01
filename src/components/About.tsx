@@ -2,7 +2,9 @@ import { User, Target, Heart } from "lucide-react";
 
 const About = () => {
   return (
-    <section id="about" className="py-20 md:py-32 bg-gradient-soft">
+    <section id="about" className="py-20 md:py-32 bg-background relative overflow-hidden">
+      {/* Background Effects */}
+      <div className="absolute inset-0 gradient-glow opacity-20"></div>
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           {/* Section Title */}
@@ -10,14 +12,14 @@ const About = () => {
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
               Mon Parcours & <span className="text-gradient">Ma Vision</span>
             </h2>
-            <div className="w-24 h-1 gradient-aqua mx-auto rounded-full"></div>
+            <div className="w-24 h-1 gradient-ice mx-auto rounded-full shadow-glow"></div>
           </div>
 
           {/* Content */}
-          <div className="space-y-8 animate-fade-in-up">
-            <div className="bg-card shadow-card rounded-2xl p-6 md:p-8 hover:shadow-aqua transition-all duration-300">
+          <div className="space-y-8 animate-fade-in-up relative z-10">
+            <div className="glass-ice rounded-2xl p-6 md:p-8 hover:shadow-glow transition-all duration-300 liquid-border">
               <div className="flex items-start gap-4 mb-4">
-                <div className="p-3 rounded-xl gradient-aqua">
+                <div className="p-3 rounded-xl gradient-ice shadow-glow">
                   <User className="text-white" size={24} />
                 </div>
                 <div>
@@ -32,9 +34,9 @@ const About = () => {
               </p>
             </div>
 
-            <div className="bg-card shadow-card rounded-2xl p-6 md:p-8 hover:shadow-aqua transition-all duration-300">
+            <div className="glass-ice rounded-2xl p-6 md:p-8 hover:shadow-glow transition-all duration-300 liquid-border">
               <div className="flex items-start gap-4 mb-4">
-                <div className="p-3 rounded-xl gradient-deep">
+                <div className="p-3 rounded-xl gradient-deep shadow-glow">
                   <Target className="text-white" size={24} />
                 </div>
                 <div>
@@ -49,9 +51,9 @@ const About = () => {
               </p>
             </div>
 
-            <div className="bg-card shadow-card rounded-2xl p-6 md:p-8 hover:shadow-aqua transition-all duration-300">
+            <div className="glass-ice rounded-2xl p-6 md:p-8 hover:shadow-glow transition-all duration-300 liquid-border">
               <div className="flex items-start gap-4 mb-4">
-                <div className="p-3 rounded-xl bg-accent">
+                <div className="p-3 rounded-xl gradient-frost shadow-glow">
                   <Heart className="text-accent-foreground" size={24} />
                 </div>
                 <div>
